@@ -2,16 +2,52 @@
 <html lang="en">
 <head>
     <title>ToDo List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts for notebook theme -->
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Simple ToDo List</h1>
-    
-    <!-- Input and button to add new ToDos -->
-     <input type = "text" id ="todo-input" placeholder="Enter a ToDo and press Add or Enter">
+    <!-- Theme toggle (icon-only) -->
+    <button id="theme-toggle" aria-label="Switch theme" title="Switch theme"></button>
 
-     <button id="add-btn">Add</button>
-     <ul id="todo-list"></ul>
+    <h1>Simple ToDo List</h1>
+
+    <div class="top-panel">
+        <input
+            type="text"
+            id="todo-input"
+            placeholder="Enter a ToDo and press Add or Enter"
+        >
+
+        <div class="top-row">
+            <select id="category-select">
+                <option value="general">General</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value="personal">Personal</option>
+                <option value="urgent">Urgent</option>
+            </select>
+            <button id="add-btn">Add</button>
+        </div>
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search tasks..."
+        >
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <div id="stats-footer">
+        <span id="stats-text"></span>
+        <button id="clear-completed">Clear completed</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
